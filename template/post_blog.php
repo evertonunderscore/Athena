@@ -8,7 +8,10 @@
                   <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12">
                       <div class="saasio-blog-img">
-                        <img src="assets/img/blog/news-4.jpg" alt="" />
+                        <img src="<?php 
+                          $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                          echo esc_url($featured_img_url); ?>
+                          " alt="<?php the_title( );?>" />
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
@@ -20,21 +23,27 @@
                         </h3>
                         <div class="saasio-post-meta">
                           <a href="#"
-                            ><i class="fas fa-calendar-alt"></i> September 12,
-                            2021</a
-                          >
+                            ><i class="fas fa-calendar-alt"></i><?php the_date('F j, Y');?></a>
                           <a href="#"><i class="fas fa-user"></i> Admin</a>
                         </div>
-                        <p>
-                          At vero eos et accusamus et iustoodio digni
-                          goikussimos ducimus qui blanp ditiis praesum voluum.
-                        </p>
-                        <a class="blog-read-more" href="#">Read More</a>
+                        <?php the_excerpt();?>
+                        <div class="tags">
+                          <span><a href="#">tag 1</a></span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                          <span>tag 2</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <?php
-                endwhile; endif; wp_reset_postdata(  ); 
+                endwhile; endif; wp_reset_postdata(); 
                 ?>

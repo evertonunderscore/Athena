@@ -111,6 +111,6 @@
         <script src="<?php echo $link; ?>/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="<?php echo $link; ?>/assets/js/side-demo.js"></script>
         <script src="<?php echo $link; ?>/assets/js/script.js"></script>
-        
+       <?php wp_footer(  );?> 
     </body>
 </html>

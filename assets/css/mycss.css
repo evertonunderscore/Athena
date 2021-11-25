@@ -1,0 +1,51 @@
+.saasio-blog-img {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+.saasio-blog-img img {
+  height: 100%;
+  justify-self: center;
+  align-self: center;
+  object-fit: cover;
+}
+.blog-read-more {
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.tags span {
+  background-color: rgb(0, 47, 76);
+  padding: 3px 10px 3px 0px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  margin: 5px 0 5px 5px;
+}
+.tags span a {
+  text-decoration: none;
+}
+.tags span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px 0 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+.saasio-blog-details-content article a {
+  color: rgb(0, 47, 76);
+  font-weight: 700 !important;
+}
+.saas-classic-scrollup {
+  background-image: linear-gradient(
+    -45deg,
+    rgb(0, 47, 76) 32%,
+    rgb(0, 78, 127) 100%
+  ) !important;
+}

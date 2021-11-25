@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="<?php echo $linkUrl; ?>/assets/css/owl.carousel.css" />
     <link rel="stylesheet" href="<?php echo $linkUrl; ?>/assets/css/side-demo.css" />
     <link rel="stylesheet" href="<?php echo $linkUrl; ?>/assets/css/style.css" />
+    <link rel="stylesheet" href="<?php echo $linkUrl; ?>/assets/css/mycss.css" />
+    <?php wp_head(  );?>
   </head>
 
   <body class="saas-classic">
