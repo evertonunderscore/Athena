@@ -28,16 +28,14 @@
                         </div>
                         <?php the_excerpt();?>
                         <div class="tags">
-                          <span><a href="#">tag 1</a></span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
-                          <span>tag 2</span>
+                        <?php
+                          // everything available
+                          foreach((get_the_category()) as $category) { 
+                              echo '<span><a href="' . get_category_link($category->cat_ID) . '">' . '' ;
+                              echo $category->cat_name . ' '; 
+                              echo '</a></span>';
+                          }; 
+                          ?>
                         </div>
                       </div>
                     </div>

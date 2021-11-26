@@ -1,6 +1,4 @@
 <?php get_header(  );?>
-    <!-- Start of blog page section
-============================================= -->
 <section id="news-feed" class="news-feed-section">
     <div class="container">
         <div class="blog-feed-content">
@@ -16,6 +14,13 @@
                                 <div class="saasio-post-meta">
                                     <a href="#"><i class="fas fa-calendar-alt"></i> <?php the_date('F j, Y');?></a>
                                     <a href="#"><i class="fas fa-user"></i> <?php the_author(); ?></a>
+                                    <span><i class="fas fa-tag"></i>
+                                        <?php 
+                                            foreach((get_the_category()) as $getCat){
+                                                echo '<a href=""'. get_category_link($getCat->cat_ID). '>'. $getCat->cat_name .  '</a> ';
+                                            }
+                                        ?>
+                                    </span>
                                 </div>
                             </div>
                             <article>
@@ -28,43 +33,6 @@
                                     <?php
                                         the_tags( null ,'','' );
                                     ?>
-                                </div>
-                            </div>
-                            <div class="saasio-comment-field dia-headline">
-                                <h3>Comments (03)</h3>
-                                <div class="comment-list-item">
-                                    <div class="comment-inner-box">
-                                        <div class="comment-author-img float-left">
-                                            <img src="assets/img/blog/ca1.jpg" alt="">
-                                        </div>
-                                        <div class="comment-author-text">
-                                            <h4><a href="#">Rolax Fellan</a></h4>
-                                            <span>November 25, 2021 at 09:00 am</span>
-                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
-                                            <a class="comment-reply" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                    <div class="comment-inner-box">
-                                        <div class="comment-author-img float-left">
-                                            <img src="assets/img/blog/ca2.jpg" alt="">
-                                        </div>
-                                        <div class="comment-author-text">
-                                            <h4><a href="#">Daile Cane</a></h4>
-                                            <span>November 25, 2021 at 09:00 am</span>
-                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
-                                            <a class="comment-reply" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Post a comment</h3>
-                                <div class="comment-form">
-                                    <form action="#">
-                                        <input type="text" name="name" placeholder="Enter Your Full Name">
-                                        <input type="email" name="email" placeholder="Enter Your  Email Address">
-                                        <input type="tetx" name="website" placeholder="Enter Your Website">
-                                        <textarea name="message" placeholder="Your Comment here..."></textarea>
-                                        <button type="submit">Comment</button>
-                                    </form>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -143,6 +111,4 @@
         </div>
     </div>
 </section>
-    <!-- End of blog section
-============================================= -->
 <?php get_footer( );?>

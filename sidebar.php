@@ -2,18 +2,14 @@
               <div class="saasio-blog-sidebar">
                 <div class="side-bar-widget">
                   <div class="category-widget dia-headline ul-li-block">
-                    <h3 class="widget-title-2">Category</h3>
-                    <ul>
-                      <li>
-                        <a href="#">Application <span>(06)</span></a>
-                      </li>
-                      <li>
-                        <a href="#">Software <span>(06)</span></a>
-                      </li>
-                      <li>
-                        <a href="#">Landing Page <span>(06)</span></a>
-                      </li>
-                    </ul>
+                    <h3 class="widget-title-2">Categorias</h3>
+                    <?php 
+                      $catargs = array(
+                        'show_count' => true,
+                        'separator' => '',
+                      );
+                      wp_list_categories( $catargs );
+                      ?>
                   </div>
                 </div>
                 <div class="side-bar-widget">
